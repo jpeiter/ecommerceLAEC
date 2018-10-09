@@ -100,12 +100,13 @@ Exibir opções de: Pessoa Física ou Jurídica . Dividir em seções de :
 ## **4 ) TELA DE PRODUTO E FRETE**
 
 **a )** Ao clicar no botão “Comprar” exibir a tela sugerida na Figura 1.
-![**Figura 1 – Tela de compra do produto**](https://scontent.ffbe1-1.fna.fbcdn.net/v/t1.15752-0/p280x280/43483685_337845210301502_546780642797420544_n.png?_nc_cat=101&oh=b6379c9ff3e8a3b24cfde1de8f830a57&oe=5C1A5D41)
+![](https://scontent.ffbe1-1.fna.fbcdn.net/v/t1.15752-0/p280x280/43483685_337845210301502_546780642797420544_n.png?_nc_cat=101&oh=b6379c9ff3e8a3b24cfde1de8f830a57&oe=5C1A5D41)
+
 **Figura 1 - Tela de compra do produto**
 
 **b )** Implementar o item da quantidade para que quando o valor for alterado atualize o valor total do pedido.
 **c )** Ao clicar no botão “Concluir Compra” exibir tela sugerida da Figura 2.
-![**Figura 2 – Tela de frete**](https://scontent.ffbe1-1.fna.fbcdn.net/v/t1.15752-0/p280x280/43458443_331411897436011_7568533597406101504_n.png?_nc_cat=108&oh=339454ac7b73095b7f30a0815b372f0f&oe=5C4F998D)
+![](https://scontent.ffbe1-1.fna.fbcdn.net/v/t1.15752-0/p280x280/43458443_331411897436011_7568533597406101504_n.png?_nc_cat=108&oh=339454ac7b73095b7f30a0815b372f0f&oe=5C4F998D)
 **Figura 2 – Tela de frete**
 
 **d )** Ao selecionar a opção “Compre e retire” deve aparecer o botão “Escolher ponto de retirada”
@@ -113,5 +114,5 @@ Exibir opções de: Pessoa Física ou Jurídica . Dividir em seções de :
 **e )** Ao selecionar a opção expressa fazer o somatório do valor do frete com o valor do produto e apresentar na tela conforme apresentado no resumo da compra, conforme apresentado na Figura 3.
 
 #### **Resumo da compra:**
-![**Figura 3 – Tela de resumo da compra**](https://scontent.ffbe1-1.fna.fbcdn.net/v/t1.15752-0/p280x280/43401229_2272764279404540_240937731046244352_n.png?_nc_cat=100&oh=5cac99f1bb1a5ffea7224d7aa57b97ae&oe=5C4BB0F8)
+![](https://scontent.ffbe1-1.fna.fbcdn.net/v/t1.15752-0/p280x280/43401229_2272764279404540_240937731046244352_n.png?_nc_cat=100&oh=5cac99f1bb1a5ffea7224d7aa57b97ae&oe=5C4BB0F8)
 **Figura 3 – Tela de resumo da compra**
