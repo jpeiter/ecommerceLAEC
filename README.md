@@ -112,6 +112,7 @@ Exibir opções de: Pessoa Física ou Jurídica . Dividir em seções de :
 
 **d )** Ao selecionar a opção “Compre e retire” deve aparecer o botão “Escolher ponto de retirada”
 ![](https://scontent.ffbe1-1.fna.fbcdn.net/v/t1.15752-9/43184466_1983937795000464_7767566543726051328_n.png?_nc_cat=108&oh=953f1d38d0d4cf48c8f36e80588376af&oe=5C47EDDD)
+
 **e )** Ao selecionar a opção expressa fazer o somatório do valor do frete com o valor do produto e apresentar na tela conforme apresentado no resumo da compra, conforme apresentado na Figura 3.
 
 #### **Resumo da compra:**
