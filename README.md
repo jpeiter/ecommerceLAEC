@@ -107,6 +107,7 @@ Exibir opções de: Pessoa Física ou Jurídica . Dividir em seções de :
 **b )** Implementar o item da quantidade para que quando o valor for alterado atualize o valor total do pedido.
 **c )** Ao clicar no botão “Concluir Compra” exibir tela sugerida da Figura 2.
 ![](https://scontent.ffbe1-1.fna.fbcdn.net/v/t1.15752-0/p280x280/43458443_331411897436011_7568533597406101504_n.png?_nc_cat=108&oh=339454ac7b73095b7f30a0815b372f0f&oe=5C4F998D)
+
 **Figura 2 – Tela de frete**
 
 **d )** Ao selecionar a opção “Compre e retire” deve aparecer o botão “Escolher ponto de retirada”
@@ -115,4 +116,5 @@ Exibir opções de: Pessoa Física ou Jurídica . Dividir em seções de :
 
 #### **Resumo da compra:**
 ![](https://scontent.ffbe1-1.fna.fbcdn.net/v/t1.15752-0/p280x280/43401229_2272764279404540_240937731046244352_n.png?_nc_cat=100&oh=5cac99f1bb1a5ffea7224d7aa57b97ae&oe=5C4BB0F8)
+
 **Figura 3 – Tela de resumo da compra**
