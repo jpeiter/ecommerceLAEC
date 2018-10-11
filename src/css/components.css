@@ -1,5 +1,11 @@
-.bg-black {
-    background-color: #191414 !important;
+/* BOOTSTRAP */
+
+.body {
+    padding-top: 3.9rem;
+}
+
+.bg-brown {
+    background-color: #25201c !important;
 }
 
 .text-gold {
@@ -17,25 +23,44 @@
     border-color: #FDE028 !important;
 }
 
-.btn-outline-gold:hover, .btn-outline-gold:active{
-    color: #191414 !important;
+.btn-outline-gold:hover, .btn-outline-gold:active {
+    color: #25201c !important;
     background-color: #FDE028 !important;
     background-image: none !important;
     border-color: #FDE028 !important;
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
-    color: #191414 !important;
+    color: #25201c !important;
     text-decoration: none;
     background-color: #FDE028 !important;
 }
 
 .dropdown-toggle:focus, .nav-link:hover {
-    color: #191414 !important;
+    color: #25201c !important;
     text-decoration: none;
     background-color: #FDE028 !important;
 }
 
-.navbar-toggler-icon{
-    color: #FDE028 !important;
+.navbar-toggler-icon {
+    background-image: url();
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.fixed-top-2 {
+    margin-top: 0px !important;
+}
+
+/* FIM BOOTSTRAP */
+
+/* ICONES */
+
+.material-icons.md-light {
+    color: #FDE028;
 }
