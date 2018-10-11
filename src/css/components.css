@@ -8,6 +8,10 @@
     background-color: #25201c !important;
 }
 
+.bg-brown-light {
+    background-color: #38312b !important;
+}
+
 .text-gold {
     color: #FDE028 !important;
 }
@@ -36,10 +40,9 @@
     background-color: #FDE028 !important;
 }
 
-.dropdown-toggle:focus, .nav-link:hover {
-    color: #25201c !important;
-    text-decoration: none;
-    background-color: #FDE028 !important;
+.nav-link:hover {
+    color: #FFC400 !important;
+    text-decoration: none !important;
 }
 
 .navbar-toggler-icon {
@@ -61,6 +64,33 @@
 
 /* ICONES */
 
-.material-icons.md-light {
-    color: #FDE028;
+.fa {
+    color: #FDE028 !important;
 }
+
+.fa:hover {
+    color: #FFC400 !important;
+}
+
+.carrinho {
+    font-size: 200% !important
+}
+
+#carrinho .p1[data-count]:after {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    right: -10px;
+    top: -10px;
+    content: attr(data-count);
+    font-size: 75%;
+    padding: 0;
+    border-radius: 50%;
+    line-height: 2em;
+    color: white;
+    background: rgba(255, 0, 0, .85);
+    text-align: center;
+    min-width: 1em;
+    font-weight: bold;
+}
+
