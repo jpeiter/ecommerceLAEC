@@ -2,6 +2,7 @@
 
 body {
     padding-top: 5rem;
+    user-select: none;
 }
 
 .bg-brown {
@@ -30,6 +31,16 @@ body {
 
 .text-brown-light {
     color: #38312b !important;
+}
+
+.border-brown{
+    border: #25201c 1px solid !important;
+    border-radius: 5px !important;
+}
+
+.border-brown-light{
+    border: #38312b 1px solid !important;
+    border-radius: 5px !important;
 }
 
 .dropdown-divider {
