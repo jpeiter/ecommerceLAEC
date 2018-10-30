@@ -3,7 +3,10 @@
 body {
     padding-top: 5rem;
     user-select: none;
+    margin: 0 !important;
+    background-color: #F7F7F7 !important;
 }
+
 
 .bg-brown {
     background-color: #25201c !important;
@@ -90,5 +93,3 @@ body {
     color: #ffffff !important;
     text-decoration: none !important;
 }
-
-/* FIM BOOTSTRAP */

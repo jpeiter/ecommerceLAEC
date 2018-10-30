@@ -1,3 +1,11 @@
+.red {
+    color: #FF0000 !important;
+}
+
+.yellow {
+    color: #FDE028 !important;
+}
+
 #indep {
     background: url('../img/ship2.jpg') no-repeat;
     height: 500px;
@@ -6,31 +14,4 @@
 #armas {
     background: url('../img/guns.jpg') no-repeat;
     height: 500px;
-}
-
-#foto-grande {
-    max-height: 500px !important;
-    max-width: 550px !important;    
-}
-
-#fotos-menores {
-    width: 100px !important;
-    max-height: 500px !important;
-}
-
-.foto-menor-li {
-    border: transparent 1px solid;
-}
-
-.border-top-brown{
-    border-top: #25201c 1px solid;
-}
-
-.foto-menor-li li {
-    margin: 0;
-    padding: 0;
-}
-
-.foto-menor {
-    max-width: 75px !important;
 }
