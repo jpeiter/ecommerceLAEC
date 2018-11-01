@@ -25,12 +25,8 @@
 }
 
 .foto-menor-li {
-    border: transparent 1px solid;
+    border: transparent 1px solid !important;
     cursor: pointer !important;
-}
-
-.border-top-brown {
-    border-top: #25201c 1px solid;
 }
 
 .foto-menor {
@@ -106,12 +102,12 @@
     content: " - Chegará entre 6 e 7 dias úteis após à aprovacão!" !important;
 }
 
-#btn-comprar{
+#btn-comprar {
     color: #28a745 !important;
     line-height: 200% !important;
     font-size: 200% !important;
 }
 
-#btn-comprar:hover{
+#btn-comprar:hover {
     color: #ffffff !important;
 }

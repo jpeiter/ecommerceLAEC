@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/stylesproduto.css">
+    <link rel="stylesheet" href="css/stylesforms.css">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-    <title>Ahoy! | Bússola </title>
+    <title>Ahoy! | Entrar </title>
 </head>
 
 <body>
@@ -96,17 +96,281 @@
 
 
     <!-- INÍCIO MAIN -->
-    <main class="container-fluid">
-        <div class="row justify-content-center py-2">
-            <div class="col-lg-8 bg-danger" id="div-form">aaaaaaa</div>
+    <main class="container">
+
+        <div class="py-2" id="formulario">
+            <!-- FORM HEAD -->
+            <div class="row justify-content-center">
+                <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-xs-11  bg-brown-light" id="form-head">
+
+                    <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+                        <li class="nav-item py-1">
+                            <a class="nav-link active text-center" id="tab-login" data-toggle="pill" href="#pill-form-login"
+                                role="tab" aria-controls="pill-form-login" aria-selected="true">LOGIN</a>
+                        </li>
+                        <li class="nav-item py-1">
+                            <a class="nav-link text-center" id="tab-cadastro" data-toggle="pill" href="#pill-form-cadastro"
+                                role="tab" aria-controls="pill-form-cadastro" aria-selected="false">CADASTRO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- FIM FORM HEAD -->
+
+            <!-- FORM BODY -->
+            <div class="row justify-content-center">
+                <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-xs-11 m-0 p-0" id="form-body">
+                    <div class="tab-content justify-content-center text-dark text-center" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pill-form-login" role="tabpanel" aria-labelledby="tab-login">
+                            <h1 class="my-3 text-gold">Embarque marinheiro!</h1>
+                            <form action="#" method="POST">
+                                <fieldset class="p-1 m-auto justify-content-center text-center">
+
+                                    <!-- EMAIL -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-5 col-lg-5 col-md-8 col-sm-12 input-group">
+                                            <input type="email" name="email-login" id="email-login" class="form-control"
+                                                placeholder="E-mail" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- SENHA -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-5 col-lg-5 col-md-8 col-sm-12 input-group">
+                                            <input type="password" name="senha-login" id="senha-login" class="form-control"
+                                                placeholder="Senha" required />
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                            </form>
+                        </div>
+
+                        <!-- FORM CADASTRO -->
+                        <div class="tab-pane fade" id="pill-form-cadastro" role="tabpanel" aria-labelledby="tab-cadastro">
+
+                            <h1 class="my-3 text-gold">Faça parte da nossa tripulação!</h1>
+                            <form action="#" method="POST">
+
+                                <fieldset class="p-1 m-auto justify-content-center">
+                                    <legend class="text-gold">Dados Pessoais</legend>
+                                    <!-- APELIDO -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="text" name="apelido" id="apelido" class="form-control"
+                                                placeholder="Apelido" required />
+                                        </div>
+                                    </div>
+
+                                    <!-- NOME COMPLETO -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="text" name="nome-completo" id="nome" class="form-control"
+                                                placeholder="Nome completo" required />
+                                        </div>
+                                    </div>
+
+                                    <!-- CPF -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="text" name="cpf" id="cpf" class="form-control" placeholder="CPF"
+                                                required />
+                                        </div>
+                                    </div>
+
+                                    <!-- DATA NASCIMENTO -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="date" name="data-nascimento" id="data-nascimento" class="form-control"
+                                                placeholder="Data de nascimento" required />
+                                        </div>
+                                    </div>
+                                    <!-- GENERO -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <select name="generos" class="form-control" required id="combo-genero">
+                                                <option value="" disabled selected>Selecione o gênero</option>
+                                                <option value="F">Feminino</option>
+                                                <option value="M">Masculino</option>
+                                                <option value="O">Outro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- CELULAR -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="tel" name="celular" id="celular" class="form-control"
+                                                placeholder="(99) 99999-9999" pattern="^\([1-9]{2}\) [0-9]{4,5}-[0-9]{4}$"
+                                                maxlength="14" data-mask="(00) 00000-0000" data-mask-selectonfocus="true"
+                                                required />
+                                        </div>
+                                    </div>
+
+                                    <!-- TELEFONE SECUNDÁRIO -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="tel" name="telefone" id="telefone" class="form-control"
+                                                placeholder="(99) 99999-9999" pattern="^\([1-9]{2}\) [0-9]{4,5}-[0-9]{4}$"
+                                                maxlength="14" data-mask="(00) 00000-0000" data-mask-selectonfocus="true"
+                                                required />
+                                        </div>
+                                    </div>
+
+                                    <!-- EMAIL -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="email" name="email-cadastro" id="email-cadastro" class="form-control"
+                                                placeholder="E-mail" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- SENHA -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="password" name="senha-cadastro" id="senha-cadastro" class="form-control"
+                                                placeholder="Senha" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- CONF. SENHA -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="password" name="cSenha" id="cSenha" class="form-control"
+                                                placeholder="Confirme a senha" required>
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+
+
+                                <fieldset class="p-1 m-auto justify-content-center text-center">
+                                    <legend class="text-gold">Dados de Entrega</legend>
+
+                                    <!-- RUA -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="text" name="rua" id="rua" class="form-control" placeholder="Rua"
+                                                required />
+                                        </div>
+                                    </div>
+
+                                    <!-- RUA -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="text" name="numero" id="numero" class="form-control"
+                                                placeholder="Número" required />
+                                        </div>
+                                    </div>
+
+                                    <!-- BAIRRO -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="text" name="bairro" id="bairro" class="form-control"
+                                                placeholder="Bairro" required />
+                                        </div>
+                                    </div>
+
+                                    <!-- CIDADE -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="text" name="cidade" id="cidade" class="form-control"
+                                                placeholder="Cidade" required />
+                                        </div>
+                                    </div>
+
+                                    <!-- COMBO ESTADOS -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <select name="estados-brasil" class="form-control" required id="combo-estados">
+                                                <option value="" disabled selected>Selecione um estado</option>
+                                                <option value="AC">Acre</option>
+                                                <option value="AL">Alagoas</option>
+                                                <option value="AP">Amapá</option>
+                                                <option value="AM">Amazonas</option>
+                                                <option value="BA">Bahia</option>
+                                                <option value="CE">Ceará</option>
+                                                <option value="DF">Distrito Federal</option>
+                                                <option value="ES">Espírito Santo</option>
+                                                <option value="GO">Goiás</option>
+                                                <option value="MA">Maranhão</option>
+                                                <option value="MT">Mato Grosso</option>
+                                                <option value="MS">Mato Grosso do Sul</option>
+                                                <option value="MG">Minas Gerais</option>
+                                                <option value="PA">Pará</option>
+                                                <option value="PB">Paraíba</option>
+                                                <option value="PR">Paraná</option>
+                                                <option value="PE">Pernambuco</option>
+                                                <option value="PI">Piauí</option>
+                                                <option value="RJ">Rio de Janeiro</option>
+                                                <option value="RN">Rio Grande do Norte</option>
+                                                <option value="RS">Rio Grande do Sul</option>
+                                                <option value="RO">Rondônia</option>
+                                                <option value="RR">Roraima</option>
+                                                <option value="SC">Santa Catarina</option>
+                                                <option value="SP">São Paulo</option>
+                                                <option value="SE">Sergipe</option>
+                                                <option value="TO">Tocantins</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- CEP -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="text" name="cep" id="cep" class="form-control" pattern="[0-9]{5}-[0-9]{3}"
+                                                placeholder="CEP" maxlength="8" required />
+                                        </div>
+                                    </div>
+
+                                    <!-- COMPLEMENTO -->
+                                    <div class="form-group row justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 input-group">
+                                            <input type="text" name="complemento" id="complemento" class="form-control"
+                                                placeholder="Complemento" required />
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FIM FORM BODY -->
+
+            <!-- FORM TAIL -->
+            <div class="row justify-content-center">
+                <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-xs-11 bg-secondary " id="form-tail">
+                    <!-- BOTÃO LOGIN -->
+                    <div class="form-group row justify-content-center botao-entrar d-block">
+                        <div class="col-xl-5 col-lg-5 col-md-8 col-sm-11 input-group justify-content-center m-auto pt-2">
+                            <input type="submit" value="ENTRAR" class="btn btn-warning text-white w-100" id="btn-login" />
+                        </div>
+                    </div>
+
+                    <!-- BOTÃO CADASTRO -->
+                    <div class="form-group row justify-content-center botao-entrar d-none">
+                        <div class="col-xl-5 col-lg-5 col-md-8 col-sm-11 input-group justify-content-center m-auto pt-2">
+                            <input type="submit" value="CADASTRAR" class="btn btn-warning text-white w-100" id="btn-cadastro" />
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- FIM FORM TAIL -->
 
         </div>
     </main>
 
+
+
     <!-- FIM MAIN -->
 
     <!-- INÍCIO FOOTER -->
-    <footer class="container-fluid py-2 bg-brown">
+    <footer class="container-fluid py-2 bg-brown ">
         <div class="row">
             <div class="col-12 col-md justify-content-center py-3">
                 <img src="img/logovertical.png" width="129" height="150" alt="Ahoy!">
@@ -129,7 +393,8 @@
                     <li class="my-1">
                         <a class="mx-1" href="#"><i class="fa fa-whatsapp big-icon light-icon light-icon" id="icon-wa"></i></a>
                         <a class="mx-1" href="#"><i class="fa fa-facebook-square big-icon light-icon" id="icon-fb"></i></a>
-                        <a class="mx-1" href="#"><i class="fa fa-instagram big-icon light-icon" id="icon-ig"></i> </a>
+                        <a class="mx-1" href="#"><i class="fa fa-instagram big-icon light-icon" id="icon-ig"></i>
+                        </a>
                     </li>
                     <li class="my-2">
                         <a class="mx-1" href="#"><i class="fa fa-youtube-square big-icon light-icon" id="icon-yt"></i></i></a>
@@ -142,7 +407,8 @@
             <div class="col-6 col-md py-3">
                 <h4 class="text-gold">Contato</h4>
                 <ul class="list-unstyled text-small">
-                    <li><a class="text-gold-light" href="tel:+554621011414"> <i class="fa fa-phone"></i> (46) 2101-1414</a></li>
+                    <li><a class="text-gold-light" href="tel:+554621011414"> <i class="fa fa-phone"></i> (46)
+                            2101-1414</a></li>
                     <li><a class="text-gold-light" href="mailto:contato@ahoystore.com"> <i class="fa fa-envelope"></i>
                             contato@ahoystore.com</a></li>
                     <li><a class="text-gold-light" href="#"> <i class="fa fa-info-circle"></i> Dúvidas e outras
@@ -158,11 +424,11 @@
                     <li><a class="text-gold-light" href="#">Termos e Condições</a></li>
                 </ul>
             </div>
-            <p class="text-gold-light m-auto text-center font-weight-light ">Ahoy! é uma empresa do grupo Piratas A
-                Bordo
-                Ltda., CNPJ nº 39.070.239/0001-73, IE nº 626.37369-05, Rua Pereira Santana, nº 753, Itajaí – SC.</p>
 
         </div>
+        <p class="text-gold-light m-auto px-3 text-center font-weight-light">Ahoy! é uma empresa do grupo Piratas A
+            Bordo
+            Ltda., CNPJ nº 39.070.239/0001-73, IE nº 626.37369-05, Rua Pereira Santana, nº 753, Itajaí – SC.</p>
     </footer>
     <!-- FIM FOOTER -->
 

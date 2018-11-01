@@ -1,0 +1,57 @@
+#form-head {
+    border-top-left-radius: 2rem !important;
+    border-top-right-radius: 2rem !important;
+}
+
+#form-body {
+    border-left: 2px #25201c solid !important;
+    border-right: 2px #25201c solid !important;
+    background: url('../img/ship1.jpg') no-repeat center center fixed;
+}
+
+
+#form-tail {
+    border-bottom-left-radius: 2rem !important;
+    border-bottom-right-radius: 2rem !important;
+    bottom: 0 !important;
+}
+
+input[type=text], input[type=password], input[type=tel], input[type=email] {
+    color: #353535 !important;
+    background: #f7f7f7cc !important;
+}
+
+input[type=text], input[type=password], input[type=tel], input[type=email] {
+    color: rgb(100, 100, 100) !important;
+}
+
+select {
+    color: rgb(100, 100, 100) !important;
+    background: rgba(247, 247, 247, 0.800) !important;
+}
+
+#btn-login, #btn-cadastro {
+    color: #030303 !important;
+    line-height: 3rem !important;
+    background: #ffd900 !important;
+}
+
+#pills-tab a {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+    width: 20em !important;
+    color: #f7f7f7 !important;
+    font-weight: bold !important;
+    border: transparent 1px solid !important;
+    margin-left: 1rem !important;
+}
+
+#pills-tab a:not(.active):hover {
+    color: #ffd900 !important;
+    border: #ffd900 1px solid !important;
+}
+
+#pills-tab li a.active {
+    background-color: #ffd900 !important;
+    color: #191914 !important;
+}
