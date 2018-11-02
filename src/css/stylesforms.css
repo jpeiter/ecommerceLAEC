@@ -4,11 +4,10 @@
 }
 
 #form-body {
-    border-left: 2px #25201c solid !important;
-    border-right: 2px #25201c solid !important;
-    background: url('../img/ship1.jpg') no-repeat center center fixed;
+    border-left: 2px #38312b solid !important;
+    border-right: 2px #38312b solid !important;
+    background: url('../img/ship1.jpg') repeat-y center center fixed;
 }
-
 
 #form-tail {
     border-bottom-left-radius: 2rem !important;
@@ -17,17 +16,17 @@
 }
 
 input[type=text], input[type=password], input[type=tel], input[type=email] {
-    color: #353535 !important;
-    background: #f7f7f7cc !important;
+    color: #00000079 !important;
+    background: rgba(247, 247, 247, 0.5) !important;
 }
 
-input[type=text], input[type=password], input[type=tel], input[type=email] {
-    color: rgb(100, 100, 100) !important;
+input[type=text]::placeholder, input[type=password]::placeholder, input[type=tel]::placeholder, input[type=email]::placeholder {
+    color: #00000079 !important;
 }
 
-select {
-    color: rgb(100, 100, 100) !important;
-    background: rgba(247, 247, 247, 0.800) !important;
+select, input[type=date] {
+    color: #000000 !important;
+    background: rgba(247, 247, 247, 0.5) !important;
 }
 
 #btn-login, #btn-cadastro {

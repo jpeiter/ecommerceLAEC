@@ -11,8 +11,6 @@ $(function () {
 
     estadoSelecionado();
     displayBotao();
-
-
 })
 
 function estadoSelecionado() {
@@ -24,15 +22,13 @@ function estadoSelecionado() {
 }
 
 function displayBotao() {
-    $('.nav-link').click(function () {
-        var abaAtiva = $('.nav-link').hasClass('active');
-        if (abaAtiva == true) {
-            setTimeout(() => {
+    $('#pills-tab > li > a').click(function () {
+        var abaAtiva = $(this).hasClass('active');
+        if (!abaAtiva) {
+            setTimeout(function () {
                 $('.botao-entrar').toggleClass('d-none d-block');
             }, 150);
-
         }
-
     });
 
 }
