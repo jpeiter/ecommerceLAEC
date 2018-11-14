@@ -4,29 +4,15 @@
 }
 
 #form-body {
-    border-left: 2px #38312b solid !important;
+    border-left: 2px #38312bb2 solid !important;
     border-right: 2px #38312b solid !important;
-    background: url('../img/ship1.jpg') repeat-y center center fixed;
+    background-color: #25201c !important;
 }
 
 #form-tail {
     border-bottom-left-radius: 2rem !important;
     border-bottom-right-radius: 2rem !important;
     bottom: 0 !important;
-}
-
-input[type=text], input[type=password], input[type=tel], input[type=email] {
-    color: #00000079 !important;
-    background: rgba(247, 247, 247, 0.5) !important;
-}
-
-input[type=text]::placeholder, input[type=password]::placeholder, input[type=tel]::placeholder, input[type=email]::placeholder {
-    color: #00000079 !important;
-}
-
-select, input[type=date] {
-    color: #000000 !important;
-    background: rgba(247, 247, 247, 0.5) !important;
 }
 
 #btn-login, #btn-cadastro {
@@ -41,16 +27,28 @@ select, input[type=date] {
     width: 20em !important;
     color: #f7f7f7 !important;
     font-weight: bold !important;
-    border: transparent 1px solid !important;
+    border: transparent 3px solid !important;
     margin-left: 1rem !important;
 }
 
 #pills-tab a:not(.active):hover {
     color: #ffd900 !important;
-    border: #ffd900 1px solid !important;
+    border: #ffd900 3px solid !important;
 }
 
 #pills-tab li a.active {
-    background-color: #ffd900 !important;
-    color: #191914 !important;
+    background-color: transparent !important;
+    border-bottom: 3px #ffd900 solid !important;
+    color: #ffd900 !important;
+}
+
+#btn-login, #btn-cadastro {
+    border: 2px transparent solid !important;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+}
+
+.error-message{
+    color: red !important;
+    float: left !important;
 }
