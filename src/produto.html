@@ -21,8 +21,8 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-brown fixed-top">
             <!-- <section> -->
-            <a class="navbar-brand col-auto" href="#">
-                <img src="img/logo.png" width="150" height="44" alt="PiratE-bay">
+            <a class="navbar-brand col-auto" href="index.html">
+                <img src="img/logo.png" width="150" height="44" alt="Ahoy!">
             </a>
             <!-- </section> -->
 
@@ -80,7 +80,9 @@
                     </li>
                     <li class="nav-item mx-1">
                         <span>
-                            <a href=""> <i class="fa fa-shopping-cart big-icon" title="Meu carrinho"></i></a>
+                            <a href="" data-toggle="modal" data-target="#modalCarrinho"><i class="fa fa-shopping-cart big-icon"
+                                    title="Meu carrinho" id="carrinho"></i></a>
+                            <span class="badge rounded-circle " id="nitens"></span>
                         </span>
                     </li>
                 </ul>
@@ -99,7 +101,7 @@
 
         <div class="row justify-content-center py-2">
             <!-- FOTOS -->
-            <div class="card w-auto px-3" id="fotos-produto">
+            <div class="card w-auto px-3 col-md-6" id="fotos-produto">
 
                 <div class="card-body">
                     <div class="bg-transparent mt-2" id="container-foto">
@@ -140,38 +142,32 @@
                 <h5 class="font-weight-light mt-4">164 Avaliações</h5>
                 <ul class="list-inline mt-0" id="ul-rating">
 
-                    <li class="list-inline-item">
-                        <span><i class="fa fa-star big-icon"></i></span>
-                    </li>
-                    <li class="list-inline-item">
-                        <span><i class="fa fa-star big-icon"></i></span>
-                    </li>
-                    <li class="list-inline-item">
-                        <span><i class="fa fa-star big-icon"></i></span>
-                    </li>
-                    <li class="list-inline-item">
-                        <span><i class="fa fa-star big-icon"></i></span>
-                    </li>
-                    <li class="list-inline-item">
-                        <span><i class="fa fa-star-half-o big-icon"></i></span>
-                    </li>
+                    <li class="list-inline-item"> <span><i class="fa fa-star big-icon"></i></span></li>
+                    <li class="list-inline-item"><span><i class="fa fa-star big-icon"></i></span></li>
+                    <li class="list-inline-item"><span><i class="fa fa-star big-icon"></i></span></li>
+                    <li class="list-inline-item"><span><i class="fa fa-star big-icon"></i></span></li>
+                    <li class="list-inline-item"> <span><i class="fa fa-star-half-o big-icon"></i></span> </li>
                     <li class="list-inline-item">
                         <h6 class="font-weight-light">(4.49)</h6>
                     </li>
-                    <li class="list-inline-item float-right">
-                        <i class="fa fa-heart-o big-icon yellow" id="fav"></i>
-                    </li>
+                    <li class="list-inline-item float-right"><i class="fa fa-heart-o big-icon yellow" id="fav"></i></li>
                 </ul>
 
                 <div>
                     <h6 class="font-weight-normal mb-0" id="preco-desconto">R$ 740</h6>
                     <h1 class="font-weight-normal mt-0" id="preco">R$ 592</h1>
 
+                    <span class="d-none red" id="aviso-vendas">Para comprar grandes quantidade entre em contato com
+                        nosso
+                        setor de vendas!</span>
+                    <span class="d-none red" id="aviso-qtde-zero">Adicione pelo menos 1 item ao carrinho!</span>
                     <div class="form-group row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xl-6 input-group ">
-                            <input type="number" id="qtdeItens" class="form-control" min="1" placeholder="Selecione a quantidade"
+                        <div class="col-lg-1 col-md-6 col-sm-6 col-xl-3 input-group ">
+                            <input type="number" id="qtdeItens" class="form-control w-50" min="1" placeholder="Quantidade"
                                 max="10" />
-
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xl-6 input-group ">
+                            <input type="submit" value="ADICIONAR AO CARRINHO" id="btn-add-carrinho" class="btn btn-warning text-dark font-weight-bold " />
                         </div>
                     </div>
 
@@ -182,7 +178,7 @@
                     <div class="mt-0">
                         <a href="" class="" data-toggle="modal" data-target="#modalPagamentos">
                             <i class="fa fa-money text-info"></i>
-                            Selecione sua forma de pagamento </a>
+                            Ver parcelas </a>
                     </div>
 
                     <!-- MODAL PAGAMENTOS-->
@@ -223,8 +219,7 @@
 
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-primary">Pronto!</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Pronto!</button>
                                 </div>
                             </div>
                         </div>
@@ -234,81 +229,115 @@
                 <!-- FIM PAGAMENTOS -->
 
                 <!-- FRETE -->
-                <div class="">
-                    <div>
-
-                        <div>
-                            <h4 class="text-dark mt-3">Frete grátis para todo o Sul do Brasil!</h4>
-                            <div class="form-group row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xl-6 input-group">
-                                    <input type="text" name="cep" id="cep" class="form-control" required placeholder="Digite o CEP"
-                                        cep-mask="00000-000" />
-                                    <div class="col-lg-3 col-md-3 col-sm-3 ">
-                                        <input type="submit" value="Calcular frete" class="btn btn-warning text-dark" />
-                                    </div>
-                                </div>
+                <div id="infos-frete">
+                    <h4 class="text-dark mt-3">Frete grátis para todo o Sul do Brasil!</h4>
+                    <span class="d-none red my-0 position-static" id="aviso-frete">Selecione um estado para
+                        calcular o frete!</span>
+                    <div class="form-group row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xl-6 input-group">
+                            <select name="estados-brasil" class="form-control" id="combo-estados">
+                                <option value="" disabled selected>Qual seu estado?</option>
+                                <option value="AC" class="norte">Acre</option>
+                                <option value="AL" class="nordeste">Alagoas</option>
+                                <option value="AP" class="norte">Amapá</option>
+                                <option value="AM" class="norte">Amazonas</option>
+                                <option value="BA" class="nordeste">Bahia</option>
+                                <option value="CE" class="nordeste">Ceará</option>
+                                <option value="DF" class="centro-oeste">Distrito Federal</option>
+                                <option value="ES" class="sudeste">Espírito Santo</option>
+                                <option value="GO" class="centro-oeste">Goiás</option>
+                                <option value="MA" class="nordeste">Maranhão</option>
+                                <option value="MT" class="centro-oeste">Mato Grosso</option>
+                                <option value="MS" class="centro-oeste">Mato Grosso do Sul</option>
+                                <option value="MG" class="centro-oeste">Minas Gerais</option>
+                                <option value="PA" class="norte">Pará</option>
+                                <option value="PB" class="nordeste">Paraíba</option>
+                                <option value="PR" class="sul">Paraná</option>
+                                <option value="PE" class="nordeste">Pernambuco</option>
+                                <option value="PI" class="nordeste">Piauí</option>
+                                <option value="RJ" class="sudeste">Rio de Janeiro</option>
+                                <option value="RN" class="nordeste">Rio Grande do Norte</option>
+                                <option value="RS" class="sul">Rio Grande do Sul</option>
+                                <option value="RO" class="norte">Rondônia</option>
+                                <option value="RR" class="norte">Roraima</option>
+                                <option value="SC" class="sul">Santa Catarina</option>
+                                <option value="SP" class="sudeste">São Paulo</option>
+                                <option value="SE" class="nordeste">Sergipe</option>
+                                <option value="TO" class="norte">Tocantins</option>
+                            </select>
+                            <div class="col-lg-3 col-md-3 col-sm-3 ">
+                                <input type="submit" value="CALCULAR FRETE" class="btn btn-warning text-dark font-weight-bold"
+                                    id="calc-frete" />
                             </div>
                         </div>
-
+                    </div>
+                    <div class="row ml-1 mt-0">
+                        <p class="mt-0 mb-3">Valor do frete: <span id="valor-frete"></span></p>
                     </div>
 
-                    <p class="my-3" id="valor-frete">Valor: </p>
-                    <div class="form-group row w-100">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 input-group ">
-                            <div class="w-100">
-                                <input type="submit" value="COMPRAR" id="btn-comprar" class="btn btn-outline-success text-light w-100" />
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <!-- FIM  FRETE -->
 
-                    <!-- MODAL FRETE-->
-                    <div class="modal fade" id="modalFrete" tabindex="-1" role="dialog" aria-labelledby="tituloModalFrete"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="tituloModalFrete">Envios disponíveis</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-group row">
-                                        <div class="form-check" id="forma-frete">
-                                            <h6 id="h6-frete-expresso">Envio expresso</h6>
-                                            <div class="form-check">
-                                                <input type="radio" name="forma-frete" id="sedex10" value="sedex10" />
-                                                <label for="sedex10">Sedex 10 - R$ 43,40</label>
-                                            </div>
 
-                                            <h6 class="my-3" id="h6-frete-normal">Envio nomal</h6>
-                                            <div class="form-check">
-                                                <input type="radio" name="forma-frete" id="pacSul" value="pacSul" />
-                                                <label for="pacSul">PAC para PR, RS, SC - Grátis!</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input type="radio" name="forma-frete" id="pacBrasil" value="pacBrasil" />
-                                                <label for="pacBrasil">PAC para demais regiões - R$ 12,40!</label>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-primary">Pronto!</button>
-                                </div>
-                            </div>
+                <div class="form-group row w-100">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 input-group ">
+                        <div class="w-100">
+                            <input type="submit" value="COMPRAR" id="btn-comprar" class="btn text-light w-100"
+                                data-toggle="modal" data-target="#modalCarrinho" />
                         </div>
                     </div>
                 </div>
-                <!-- FIM MODAL FRETE -->
-                <!-- FIM  FRETE -->
-
 
             </div>
             <!-- FIM INFOS -->
         </div>
+
+        <div class="row justify-content-center py-2">
+
+            <div class="card w-auto px-3 py-2 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-xs-12" id="descs-produto">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" id="ul-descs-produto">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-descs-tab" data-toggle="pill" href="#pills-descs" role="tab"
+                            aria-controls="pills-descs" aria-selected="true">Descrição</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-materiais-tab" data-toggle="pill" href="#pills-materiais" role="tab"
+                            aria-controls="pills-materiais" aria-selected="false">Materiais</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-dimpeso-tab" data-toggle="pill" href="#pills-dimpeso" role="tab"
+                            aria-controls="pills-dimpeso" aria-selected="false">Dimensões e Peso</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-descs" role="tabpanel" aria-labelledby="pills-descs-tab">
+                        <h2 class="">Bússola de Navegação</h2>
+                        <p>Confeccionada no ano de 1690, este instrumento de navegação, utilizado desde os primórdios
+                            dos descobrimentos marítmos, passou pelas mãos dos piratas mais famosos, como o Barba
+                            Negra e William Kidd, e passeou pelo convés do Holandês Voador.
+                        </p>
+                        <p>Este artefato, se bem manuseado, levará o marujo que o tiver em mãos ao seu destino o mais
+                            rápida e precisamente, evitando os trajetos com obstáculos e fazendo com que as léguas
+                            pareçam estar pela metade!</p>
+                    </div>
+                    <div class="tab-pane fade" id="pills-materiais" role="tabpanel" aria-labelledby="pills-materiais-tab">
+                        <h2>Materiais utilizado na confecção</h2>
+                        <p><strong>Caixa externa:</strong> Carvalho</p>
+                        <p><strong>Pigmentos para decoração:</strong> Urucum e beterraba, açafrão e enxofre, carvão e
+                            pó de conchas de caracol</p>
+                        <p><strong>Detalhes brilhantes:</strong> Ouro, prata e bronze</p>
+                    </div>
+                    <div class="tab-pane fade" id="pills-dimpeso" role="tabpanel" aria-labelledby="pills-dimpeso-tab">
+                        <h2>Dimensões</h2>
+                        <p><strong>Comprimento:</strong> 8,5cm</p>
+                        <p><strong>Largura:</strong> 8,5cm</p>
+                        <p><strong>Altura:</strong> 3,5cm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- FIM MAIN -->
@@ -366,13 +395,81 @@
                     <li><a class="text-gold-light" href="#">Termos e Condições</a></li>
                 </ul>
             </div>
-            <p class="text-gold-light m-auto text-center font-weight-light ">Ahoy! é uma empresa do grupo Piratas A
-                Bordo
-                Ltda., CNPJ nº 39.070.239/0001-73, IE nº 626.37369-05, Rua Pereira Santana, nº 753, Itajaí – SC.</p>
-
         </div>
+        <p class="text-gold-light m-auto text-center font-weight-light" id="info-empresa">Ahoy! é uma empresa do grupo
+            Piratas A
+            Bordo
+            Ltda., CNPJ nº 39.070.239/0001-73, IE nº 626.37369-05, Rua Pereira Santana, nº 753, Itajaí – SC.</p>
     </footer>
     <!-- FIM FOOTER -->
+
+
+    <!-- MODAL FRETE-->
+    <div class="modal fade" id="modalFrete" tabindex="-1" role="dialog" aria-labelledby="tituloModalFrete" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tituloModalFrete">Envios disponíveis</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <div class="form-check" id="forma-frete">
+                            <h6 id="h6-frete-expresso">Envio expresso</h6>
+                            <div class="form-check">
+                                <input type="radio" name="forma-frete" id="sedex10" value="sedex10" />
+                                <label for="sedex10">Sedex 10 - R$ 43,40</label>
+                            </div>
+
+                            <h6 class="my-3" id="h6-frete-normal">Envio nomal</h6>
+                            <div class="form-check">
+                                <input type="radio" name="forma-frete" id="pacSul" value="pacSul" />
+                                <label for="pacSul">PAC para PR, RS, SC - Grátis!</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="forma-frete" id="pacBrasil" value="pacBrasil" />
+                                <label for="pacBrasil">PAC para demais regiões - R$ 12,40!</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Pronto!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIM MODAL FRETE -->
+
+    <!-- MODAL CARRINHO-->
+    <div class="modal fade bd-example-modal-lg" id="modalCarrinho" tabindex="-1" role="dialog" aria-labelledby="tituloModalCarrinho"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document" id="modal-carrinho">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tituloModalCarrinho">Meu carrinho</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row" id="itensModalCarrinho">a</div>
+                    <div class="row" id="precosModalCarrinho">a</div>
+                    <div class="row" id="comprarModalCarrinho">a</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Continuar comprando</button>
+                    <button type="button" class="btn btn-primary">FINALIZAR COMPRA!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIM MODAL CARRINHO -->
 
     <script src="js/jq/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>

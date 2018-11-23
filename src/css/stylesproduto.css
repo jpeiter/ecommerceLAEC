@@ -103,11 +103,42 @@
 }
 
 #btn-comprar {
-    color: #28a745 !important;
+    background-color: #28a745 !important;
     line-height: 200% !important;
     font-size: 200% !important;
 }
 
 #btn-comprar:hover {
     color: #ffffff !important;
+}
+
+#descs-produto {
+    border: none !important;
+}
+
+#pills-tabContent {
+    border-top: #ccc 1px solid !important;
+}
+
+#pills-tabContent .tab-pane h2 {
+    margin-top: 1rem !important;
+}
+
+#pills-tab a:not(.active) {
+    color: #38312b !important;
+}
+
+#pills-tab a:hover {
+    font-weight: 600 !important;
+}
+
+#valor-frete {
+    color: #f00 !important;
+    font-weight: bold !important;
+    font-size: 150% !important;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #38312b !important;
+    color: #FDE028 !important;
 }

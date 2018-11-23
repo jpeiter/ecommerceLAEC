@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesfrete.css">
+    <title>Ahoy! | Finalizar compra </title>
+</head>
+
+<body>
+
+    <!-- INÍCIO NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-brown fixed-top">
+            <!-- <section> -->
+            <a class="navbar-brand col-auto" href="index.html">
+                <img src="img/logo.png" width="150" height="44" alt="Ahoy!">
+            </a>
+            <!-- </section> -->
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="">
+                    <i class="fa fa-bars"></i>
+                </span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-gold" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Categorias
+                        </a>
+                        <div class="dropdown-menu bg-brown-light mx-0 px-0" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item text-gold" href="#">Vestimentas</a>
+                            <a class="dropdown-item text-gold" href="#">Acessórios</a>
+                            <a class="dropdown-item text-gold" href="#">Armas</a>
+                            <a class="dropdown-item text-gold" href="#">Joias</a>
+                            <a class="dropdown-item text-gold" href="#">Embarcações</a>
+                            <a class="dropdown-item text-gold" href="#">Diversos</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- SEARCHBAR -->
+            <form class="d-inline w-25 d-xl-block d-lg-block d-md-none d-sm-none">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Pesquisar itens..." aria-label="Search">
+                    <span class="input-group-append">
+                        <button class="btn btn-outline-gold border" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </form>
+
+            <!-- FIM SEARCHBAR -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ">
+                    <li class="nav-item mx-1">
+                        <a class="nav-link text-gold" href="#">Contato</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link text-gold" href="#">Cadastro</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link text-gold" href="#">Entrar</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <span>
+                            <a href=""><i class="fa fa-shopping-cart big-icon" title="Meu carrinho" id="carrinho"></i></a>
+                            <span class="badge rounded-circle " id="nitens"></span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- FIM NAVBAR -->
+
+
+
+
+    <!-- INÍCIO MAIN -->
+    <main class="container-fluid">
+
+        <div class="py-2" id="final-compra">
+            <div class="row justify-content-center px-5">
+                <!-- INFORMACOES DE ENVIO -->
+                <div class="col-lg-7" id="infos-envio">
+                    <h2>Endereço de envio:</h2>
+                    <div class="row m-2 py-2" id="div-endereco">
+                        <div class="col-lg-2" id="img-local"></div>
+                        <div class="col-lg-10 py-2">
+                            <h4 id="main-address">Rua da Flores 459, Centro</h4>
+                            <p id="detail-address">Apto 703, Mogi Guaçu, São Paulo - CEP 13807699</p>
+                        </div>
+                    </div>
+                    <h2 class="mt-4">Como deseja o frete?</h2>
+                    <div class="row m-2 py-2">
+                        <div class="col-lg-12 py-2 my-1 div-tipo-frete frete-selecionado" id="freteNormal">
+                            <h4>Frete Normal</h4>
+                            <h6 id="valor-normal">Valor: R$ 35,99</h6>
+                            <p>Chega em 15 dias úteis</p>
+                        </div>
+                        <div class="col-lg-12 py-2 my-1 div-tipo-frete tipo-frete" id="freteExpresso">
+                            <h4>Frete Expresso</h4>
+                            <h6 id="valor-expresso">Valor: R$ 67,55</h6>
+                            <p>Chega em 5 dias úteis</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIM INFORMACOES DE ENVIO -->
+
+                <!-- INFORMACOES DO PRODUTO-->
+                <div class="col-lg-5 text-center py-2" id="infos-produtos">
+                    <div class="row justify-content-center">
+                        <img src="img/produtos/bussola1-mini.jpg" alt="" id="foto-produto">
+                    </div>
+                    <div class="row justify-content-center px-5 py-2">
+                        <h2 class="font-weight-normal">Bussola de Navegação</h2>
+                        <h6 class="mt-1">Quantidadade: 1</h6>
+                    </div>
+
+                    <div class="row justify-content-center px-5 mt-4">
+                        <h6 class=""> Total de Produtos: R$ 592,00</h6>
+                    </div>
+
+                    <div class="row justify-content-center px-5">
+                        <h6 class=""> Frete: R$ 35,99</h6>
+                    </div>
+
+                    <div class="row justify-content-center px-5">
+                        <h3 class=""> Total: R$ 627,99</h3>
+                    </div>
+
+                    <input type="submit" value="FINALIZAR COMPRA" id="btn-finalizar" class="btn btn-success text-light w-75 mt-5" />
+                    <input type="submit" value="Cancelar" id="btn-cancelar" class="btn btn-warning text-brown w-75 mt-1" />
+                </div>
+                <!-- FIM INFORMACOES DO PRODUTO-->
+            </div>
+        </div>
+    </main>
+
+    <!-- FIM MAIN -->
+
+    <!-- INÍCIO FOOTER -->
+    <footer class="container-fluid py-2 bg-brown">
+        <div class="row">
+            <div class="col-12 col-md justify-content-center py-3">
+                <img src="img/logovertical.png" width="129" height="150" alt="Ahoy!">
+                <small class="d-block mb-2  text-gold">©2018</small>
+            </div>
+            <div class="col-6 col-md py-3">
+                <h4 class="text-gold">Categorias</h4>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-gold-light" href="#">Acessórios</a></li>
+                    <li><a class="text-gold-light" href="#">Armas</a></li>
+                    <li><a class="text-gold-light" href="#">Diversos</a></li>
+                    <li><a class="text-gold-light" href="#">Embarcações</a></li>
+                    <li><a class="text-gold-light" href="#">Joias</a></li>
+                    <li><a class="text-gold-light" href="#">Vestimenta</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md py-3">
+                <h4 class="text-gold">Nos Encontre</h4>
+                <ul class="list-unstyled text-small">
+                    <li class="my-1">
+                        <a class="mx-1" href="#"><i class="fa fa-whatsapp big-icon light-icon light-icon" id="icon-wa"></i></a>
+                        <a class="mx-1" href="#"><i class="fa fa-facebook-square big-icon light-icon" id="icon-fb"></i></a>
+                        <a class="mx-1" href="#"><i class="fa fa-instagram big-icon light-icon" id="icon-ig"></i> </a>
+                    </li>
+                    <li class="my-2">
+                        <a class="mx-1" href="#"><i class="fa fa-youtube-square big-icon light-icon" id="icon-yt"></i></i></a>
+                        <a class="mx-1" href="#"><i class="fa fa-twitter-square big-icon light-icon light-icon light-icon"
+                                id="icon-tt"></i></a>
+                        <a class="mx-1" href="#"><i class="fa fa-snapchat-square big-icon light-icon light-icon" id="icon-sc"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md py-3">
+                <h4 class="text-gold">Contato</h4>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-gold-light" href="tel:+554621011414"> <i class="fa fa-phone"></i> (46) 2101-1414</a></li>
+                    <li><a class="text-gold-light" href="mailto:contato@ahoystore.com"> <i class="fa fa-envelope"></i>
+                            contato@ahoystore.com</a></li>
+                    <li><a class="text-gold-light" href="#"> <i class="fa fa-info-circle"></i> Dúvidas e outras
+                            informações</a></li>
+                    <li><a class="text-gold-light" href="https://www.google.com.br/maps/place/826+Valencia+Pirate+Supply+Store/@37.759551,-122.4215619,3a,90y,357.56h,85.78t/data=!3m8!1e1!3m6!1sAF1QipOfetPsfcVMEzeWglCmA1eIK9ztOOdKUOfiknd9!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOfetPsfcVMEzeWglCmA1eIK9ztOOdKUOfiknd9%3Dw234-h106-k-no-pi-2.9338646-ya316.5-ro-0-fo100!7i7744!8i3872!4m5!3m4!1s0x808f7e3d00b3d587:0xf1147e44de22c5e!8m2!3d37.7595618!4d-122.4216376"><i
+                                class="fa fa-map-marker"></i> Localização</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md py-3">
+                <h4 class="text-gold">Sobre</h4>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-gold-light" href="#">Política de Privacidade</a></li>
+                    <li><a class="text-gold-light" href="#">Termos e Condições</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-gold-light m-auto text-center font-weight-light" id="info-empresa">Ahoy! é uma empresa do grupo
+            Piratas A
+            Bordo
+            Ltda., CNPJ nº 39.070.239/0001-73, IE nº 626.37369-05, Rua Pereira Santana, nº 753, Itajaí – SC.</p>
+    </footer>
+    <!-- FIM FOOTER -->
+
+    <script src="js/jq/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/localStorage.js"></script>
+    <script src="js/scriptsFrete.js"></script>
+</body>
+
+</html>
