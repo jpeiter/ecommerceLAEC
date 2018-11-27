@@ -1,10 +1,11 @@
 $(function () {
-
+    //TROCAR FOTO PELA MINIATURA CLICADA
     $('.foto-menor-li').click(function () {
         let imgSrc = $(this).children().attr('src');
         $('#foto-grande').attr('src', imgSrc.replace("-mini", ""));
     });
 
+    //MARCAR PRODUTO COMO FAVORITO
     $('#fav').click(function () {
         $(this).toggleClass('fa-heart-o fa-heart');
         $(this).toggleClass('yellow red');
@@ -16,17 +17,39 @@ $(function () {
         }
     });
 
+    //ADICIONAR PRODUTO NO CARRINHO
     $('#btn-add-carrinho').click(function (e) {
+        let qtde = Number($('#qtdeItens').val());
+
         e.preventDefault();
-        if ($('#qtdeItens').val() >= 1) {
-            $('#nitens').text(
-                $('#qtdeItens').val()
-            );
-            localStorage.setItem('itensCarrinho', $('#qtdeItens').val());
+        if (qtde >= 1) {
+            $('#nitens').text(qtde);
+            localStorage.setItem('itensCarrinho', qtde);
+
+            let nome = $('#nome-produto').text();
+            let preco = Number($('#preco').text().replace(/[^0-9.-]+/g, ""));
+            let valorFrete = $('#valor-frete').text();
+            let frete;
+
+            if (valorFrete === "" || valorFrete === "GRÁTIS!!!") {
+                frete = 0;
+            }
+            else {
+                frete = parseFloat($('#valor-frete').text().replace("R$ ", "").replace(",", "."));
+            }
+
+            let infosProduto = {
+                'nome': nome,
+                'preco': preco,
+                'qtde': qtde,
+                'valorfrete': frete
+            };
+            localStorage.setItem('infosProduto', JSON.stringify(infosProduto));
             alert($('#qtdeItens').val() + " iten(s) adicionados ao carrinho!");
         }
     });
 
+    //SELECIONAR QUANTIDADES
     $('#qtdeItens').click(function (e) {
         e.preventDefault();
 
@@ -47,6 +70,7 @@ $(function () {
     });
 
 
+    //CALCULAR VALOR DO FRETE BASEADO POR REGIÃO
     $('#calc-frete').click(function (e) {
         e.preventDefault();
         let estado = $('#combo-estados option:selected');
@@ -76,8 +100,12 @@ $(function () {
                 $('#aviso-frete').removeClass('d-block')
                 $('#aviso-frete').removeClass('d-none')
             }
-
         }
+    });
+
+    $("#btn-comprar").click(function (e) {
+        e.preventDefault();
+        window.location.href = "frete.html";
     });
 
 
