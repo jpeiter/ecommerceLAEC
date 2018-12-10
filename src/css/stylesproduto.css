@@ -142,3 +142,15 @@
     background-color: #38312b !important;
     color: #FDE028 !important;
 }
+
+.form-row{
+    padding-top: 3% !important;
+}
+
+#formAvaliacoes label{
+    font-weight: 600 !important; 
+}
+
+#ul-classificacao li{
+    cursor: pointer !important;
+}

@@ -207,7 +207,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal">Pronto!</button>
@@ -324,6 +323,131 @@
                 </div>
             </div>
         </div>
+
+        <!-- AVALIACOES -->
+        <div class="row justify-content-center py-2">
+            <div class="w-auto px-3 py-2 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-xs-12" id="avaliacoes">
+
+
+                <div class="row p-2" id="comentarios">
+                    <div class="col-lg-5" id="div-infos-cliente-comentario">
+                        <ul class="list-inline mt-1 d-none" id="classificao-produto">
+                            <li class="list-inline-item" value="1" id="toptop">
+                                <span><i class="fa fa-star big-icon"></i></span>
+                            </li>
+                            <li class="list-inline-item" value="2">
+                                <span><i class="fa fa-star big-icon"></i></span>
+                            </li>
+                            <li class="list-inline-item" value="3">
+                                <span><i class="fa fa-star big-icon"></i></span>
+                            </li>
+                            <li class="list-inline-item" value="4">
+                                <span><i class="fa fa-star big-icon"></i></span>
+                            </li>
+                            <li class="list-inline-item" value="5">
+                                <span><i class="fa fa-star big-icon"></i></span>
+                            </li>
+                        </ul>
+                        <h5 id="apelidoCom" class="font-weight-normal"></h5>
+                        <h6 id="localCom" class="font-weight-normal"></h6>
+                    </div>
+                    <div class="col-lg-7" id="div-comentario">
+                        <h4 id="geralCom"></h4>
+                        <h5 id="tituloCom" class=""></h5>
+                        <h6 id="comentario" class="font-weight-normal"></h6>
+                    </div>
+                </div>
+
+                <div class="row p-2 justify-content-center">
+                    <button id="btn-avalie" class="btn w-25 btn-info" data-toggle="modal" data-target="#modalFormAvaliacao">Avalie
+                        esse produto</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalFormAvaliacao" tabindex="-1" role="dialog" aria-labelledby="titulomodalFormAvaliacao"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="titulomodalFormAvaliacao">O que achou desse produto?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body px-4">
+                        <form action="POST" id="formAvaliacoes" class="needs-validation">
+
+                            <div class="form-row">
+                                <label for="tituloAv">Título da Avaliação*</label>
+                                <input type="text" name="tituloAv" id="tituloAv" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ul-classificacao">Sua classificação*</label>
+                                <ul class="list-inline mt-1" id="ul-classificacao">
+                                    <li class="list-inline-item">
+                                        <span><i class="fa fa-star big-icon starCl"></i></span>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span><i class="fa fa-star big-icon starCl"></i></span>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span><i class="fa fa-star big-icon starCl"></i></span>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span><i class="fa fa-star big-icon starCl"></i></span>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span><i class="fa fa-star big-icon starCl"></i></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="comentariosAv">Comentários*</label>
+                                <textarea name="comentariosAv" id="comentariosAv" cols="30" rows="5" class="form-control"
+                                    required></textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="apelidoAv">Apelido*</label>
+                                <input type="text" name="apelidoAv" id="apelidoAv" class="form-control" required>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="localAv">Sua Localização*</label>
+                                <input type="text" name="localAv" id="localAv" class="form-control" required>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="avSim" class="float-right font-weight-bold">Avaliação Geral</label>
+                                <div class="input-group" id="recomendacao">
+                                    <div class="form-check">
+                                        <input type="radio" name="novidades" id="avsim" value="Sim, eu recomendaria isso a um amigo."
+                                            class="" />
+                                        <label for="avsim">Sim, eu recomendaria isso a um amigo.</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="novidades" id="avnao" value="Não, eu não recomendaria isso a um amigo." />
+                                        <label for="avnao">Não, eu não recomendaria isso a um amigo.</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-row justify-content-center">
+                                <button type="button" class="btn btn-success" type="submit" id="sendReview">Enviar
+                                    revisão</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM AVALIACOES -->
     </main>
     <!-- FIM MAIN -->
 
@@ -435,6 +559,8 @@
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/scriptsProduto.js"></script>
     <script src="js/localStorage.js"></script>
+
+
 </body>
 
 </html>

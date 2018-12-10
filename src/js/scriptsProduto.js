@@ -108,5 +108,40 @@ $(function () {
         window.location.href = "frete.html";
     });
 
+    //ENVIAR COMENTARIO
+    $('#sendReview').click(function (e) {
+        e.preventDefault();
+        let titulo = $('#tituloAv').val();
+        let comentario = $('#comentariosAv').val();
+        let apelido = $('#apelidoAv').val();
+        let local = $('#localAv').val();
+        let geral = $("#recomendacao input:checked").val();
+        if (titulo !== "" || comentario !== "" || apelido !== ""
+            || local !== "" || geral === undefined) {
+            $('#apelidoCom').text(apelido);
+            $('#localCom').text(local);
+            $('#tituloCom').text(titulo);
+            $('#comentario').text(comentario);
+            $('#geralCom').text(geral);
+
+            $('#tituloAv').val("");
+            $('#comentariosAv').val("");
+            $('#apelidoAv').val("");
+            $('#localAv').val("");
+            $('#geralAv').val("");
+
+            $('#classificao-produto').addClass('d-block');
+            $('#modalFormAvaliacao').modal('hide');
+        }
+        else {
+            alert("Preencha os campos obrigatórios!");
+        }
+
+    });
+
+    $('#ul-classificacao li').click(function (e) {
+        $(this).addClass('yellow');
+    });
+
 
 })
